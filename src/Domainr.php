@@ -15,7 +15,7 @@
 class Domainr {
 
   // Base URL for domai.nr API calls
-  const BASE_URI = "http://domai.nr/api";
+  const BASE_URI = "https://domai.nr/api";
 
   // Contains all the valid methods for each API
   private $apis = array(
