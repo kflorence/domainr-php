@@ -6,9 +6,9 @@
  *
  * @author Kyle Florence
  * @website http://github.com/kflorence/domainr-php
- * @version 0.1.0
+ * @version 0.1.1
  *
- * Copyright (c) 2010 Kyle Florence
+ * Copyright (c) 2014 Kyle Florence
  * Dual licensed under the MIT and GPL licenses.
  */
 
@@ -16,6 +16,9 @@ class Domainr {
 
   // Base URL for domai.nr API calls
   const BASE_URI = "https://domai.nr/api";
+  
+  // Client ID. See https://github.com/kflorence/domainr-php/issues/2
+  const CLIENT_ID = "php_kflorence";
 
   // Contains all the valid methods for each API
   private $apis = array(
@@ -66,6 +69,9 @@ class Domainr {
    */
   private function callAPI($url, $params = array()) {
     $response = null;
+    
+    // Add client_id to params.
+    $params["client_id"] = self::CLIENT_ID;
 
     // Build full URL
     $url = self::BASE_URI . $url . "?" . http_build_query($params);
@@ -81,7 +87,7 @@ class Domainr {
       $result_info = curl_getinfo($ch);
 
       // Handle response based on HTTP status code
-      switch($result_info['http_code']) {
+      switch($result_info["http_code"]) {
         case 0: {
           throw new Exception("Request timed out: " . $url);
           break;
