@@ -2,7 +2,7 @@
 
 /**
  * @fileOverview domainr-php
- * A PHP client library for Domai.nr API's
+ * A PHP client library for Domainr API's
  *
  * @author Kyle Florence
  * @website http://github.com/kflorence/domainr-php
@@ -14,8 +14,8 @@
 
 class Domainr {
 
-  // Base URL for domai.nr API calls
-  const BASE_URI = "https://domai.nr/api";
+  // Base URL for Domainr API calls
+  const BASE_URI = "https://domainr.com/api";
   
   // Client ID. See https://github.com/kflorence/domainr-php/issues/2
   const CLIENT_ID = "php_kflorence";
