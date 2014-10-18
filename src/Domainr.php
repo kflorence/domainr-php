@@ -6,7 +6,7 @@
  *
  * @author Kyle Florence
  * @website http://github.com/kflorence/domainr-php
- * @version 0.1.1
+ * @version 1.0.0
  *
  * Copyright (c) 2014 Kyle Florence
  * Dual licensed under the MIT and GPL licenses.
