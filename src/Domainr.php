@@ -6,7 +6,7 @@
  *
  * @author Kyle Florence
  * @website http://github.com/kflorence/domainr-php
- * @version 1.0.0
+ * @version 1.0.1
  *
  * Copyright (c) 2014 Kyle Florence
  * Dual licensed under the MIT and GPL licenses.
@@ -15,7 +15,7 @@
 class Domainr {
 
   // Base URL for Domainr API calls
-  const BASE_URI = "https://domainr.com/api";
+  const BASE_URI = "https://api.domainr.com/v1";
   
   // Client ID. See https://github.com/kflorence/domainr-php/issues/2
   const CLIENT_ID = "php_kflorence";
