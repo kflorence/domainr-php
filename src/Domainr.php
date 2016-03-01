@@ -16,9 +16,6 @@ class Domainr {
 
   // Base URL for Domainr API calls
   const BASE_URI = "https://api.domainr.com/v1";
-  
-  // Client ID. See https://github.com/kflorence/domainr-php/issues/2
-  const CLIENT_ID = "php_kflorence";
 
   // Contains all the valid methods for each API
   private $apis = array(
@@ -69,9 +66,6 @@ class Domainr {
    */
   private function callAPI($url, $params = array()) {
     $response = null;
-    
-    // Add client_id to params.
-    $params["client_id"] = self::CLIENT_ID;
 
     // Build full URL
     $url = self::BASE_URI . $url . "?" . http_build_query($params);
